@@ -9,7 +9,7 @@ const config = {
 }
 
 const Twitter = new twit(config);
-const stream = Twitter.stream('statuses/filter', { follow: '@realdonaldtrump, ' })
+const stream = Twitter.stream('statuses/filter', { follow: '@realdonaldtrump' })
 
 // import shootings data
  const data = require('./data.json');

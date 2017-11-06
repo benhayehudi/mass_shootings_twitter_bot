@@ -19,17 +19,23 @@ const stream = Twitter.stream('statuses/filter', { follow: '@realdonaldtrump' })
  console.log("Mass Shootings Bot Activated");
 
 // the response function
+// creating the variables to hold the current place in the data and to persist it when application restarts
+let x;
+let i;
+if (i > 1) {
+  i = x;
+} else {
+  i = 1;
+}
  function respond(event) {
    let screenName = event.source.screen_name;
-     let i = 1,
-        current = data[i],
-        next = data[i+1],
+     let current = data[i],
         victimTotal = parseInt(current[4]) + parseInt(current[5]);
         console.log(`Current Before Tweeting: ${current}`)
         console.log(`Next Before Tweeting: ${next}`)
       tweetNow('.@' + screenName + ` - Never forget ${current[0]} in ${current[2]}, ${current[1]} when ${victimTotal} people were killed & injured. #gunviolence #MassShootings`);
-      current = next;
-      next = data[i+1];
+      i++;
+      x = i;
       console.log(`Current After Tweeting: ${current}`)
       console.log(`Next After Tweeting: ${next}`)
  }

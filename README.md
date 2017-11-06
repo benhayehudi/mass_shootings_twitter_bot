@@ -1,11 +1,11 @@
 # Remembering the Victims: A Mass Shootings Remembrance Twitter Bot
-Created by ![Ben Greenberg](https://www.bengreenberg.org)
+Created by [Ben Greenberg](https://www.bengreenberg.org)
 
 ## Overview
 
 This is a simple Twitter bot that will respond to each tweet by President Donald Trump's twitter account (@realdonaldtrump) with a reminder of a recent mass shooting from 2017.
 
-The bot is created with NodeJS and uses the twit node package to communicate with Twitter. The data comes from the ![Gun Violence Archive](http://www.gunviolencearchive.org/).
+The bot is created with NodeJS and uses the twit node package to communicate with Twitter. The data comes from the [Gun Violence Archive](http://www.gunviolencearchive.org/).
 
 ## Installation
 
@@ -25,4 +25,4 @@ This bot is licensed under the MIT license.
 
 ## Contact
 
-Feel free to get in touch with me if you have any suggestions or comments at ![bengreenberg.org](https://www.bengreenberg.org)
+Feel free to get in touch with me if you have any suggestions or comments at [bengreenberg.org](https://www.bengreenberg.org)

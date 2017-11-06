@@ -15,5 +15,8 @@
     "twit"
   ],
   "author": "Ben Greenberg",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "twit": "^2.2.9"
+  }
 }

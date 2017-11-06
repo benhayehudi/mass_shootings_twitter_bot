@@ -25,11 +25,10 @@ i > 1 ? i = x : i = 1;
 
 // the response function
  function respond(event) {
-   let screenName = event.source.screen_name;
      let current = data[i],
         victimTotal = parseInt(current[4]) + parseInt(current[5]);
         console.log(`Current Before Tweeting: ${current}`)
-      tweetNow('.@' + screenName + ` - Never forget ${current[0]} in ${current[2]}, ${current[1]} when ${victimTotal} people were killed & injured. #gunviolence #MassShootings`);
+      console.log(event)
       i++;
       x = i;
       console.log(`Current After Tweeting: ${current}`)

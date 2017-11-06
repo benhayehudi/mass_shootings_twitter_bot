@@ -18,15 +18,12 @@ const stream = Twitter.stream('statuses/filter', { follow: '@realdonaldtrump' })
  stream.on('tweet', respond);
  console.log("Mass Shootings Bot Activated");
 
-// the response function
 // creating the variables to hold the current place in the data and to persist it when application restarts
 let x;
 let i;
-if (i > 1) {
-  i = x;
-} else {
-  i = 1;
-}
+i > 1 ? i = x : i = 1
+
+// the response function
  function respond(event) {
    let screenName = event.source.screen_name;
      let current = data[i],

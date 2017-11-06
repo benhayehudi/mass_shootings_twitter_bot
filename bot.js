@@ -9,42 +9,42 @@ const config = {
 }
 
 const Twitter = new twit(config);
-const stream = Twitter.stream('statuses/filter', { follow: '25073877' })
 
 // import shootings data
  const data = require('./data.json');
 
-// start Twitter stream with callback to respond()
- stream.on('tweet', respond);
  console.log("Mass Shootings Bot Activated");
 
 // creating the variables to hold the current place in the data and to persist it when application restarts
 let x;
 let i;
-i > 1 ? i = x : i = 1;
+if (i > 1) {
+  i = x
+} else if (i > data.length) {
+  i = 1
+} else {
+  i = 1
+}
 
 // the response function
- function respond(event) {
-     let current = data[i],
-        victimTotal = parseInt(current[4]) + parseInt(current[5]);
-        console.log(`Current Before Tweeting: ${current}`)
-      console.log(event)
-      i++;
-      x = i;
-      console.log(`Current After Tweeting: ${current}`)
- }
 
-// send each message
- function tweetNow(tweetTxt) {
-  let tweet = {
-      status: tweetTxt
-  }
-  Twitter.post('statuses/update', tweet, function(err, data, response) {
-    if(err){
-      console.log(err);
-    }
-    else {
-      console.log("Responded");
-    }
-  });
-}
+let tweet = function() {
+  let current = data[i],
+     victimTotal = parseInt(current[4]) + parseInt(current[5]);
+
+          Twitter.post('statuses/update', { status: `.@realdonaldtrump - Never forget ${current[0]} in ${current[2]}, ${current[1]} when innocent people were killed & injured. #gunviolence` }, function(err, data, response) {
+            if (response) {
+              i + 1;
+              x = i;
+              console.log("Tweeted to Donald Trump")
+              console.log(`i is now: ${i}`);
+              console.log(`x is now ${x}`);
+            }
+            if (err) {
+              console.log(`There was an error: ${err}`);
+            }
+          });
+        }
+
+tweet();
+setInterval(tweet, 3600000);

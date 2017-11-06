@@ -29,12 +29,10 @@ i > 1 ? i = x : i = 1;
      let current = data[i],
         victimTotal = parseInt(current[4]) + parseInt(current[5]);
         console.log(`Current Before Tweeting: ${current}`)
-        console.log(`Next Before Tweeting: ${next}`)
       tweetNow('.@' + screenName + ` - Never forget ${current[0]} in ${current[2]}, ${current[1]} when ${victimTotal} people were killed & injured. #gunviolence #MassShootings`);
       i++;
       x = i;
       console.log(`Current After Tweeting: ${current}`)
-      console.log(`Next After Tweeting: ${next}`)
  }
 
 // send each message

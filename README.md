@@ -5,7 +5,7 @@ Created by [Ben Greenberg](https://www.bengreenberg.org)
 
 This is a simple Twitter bot that will respond to each tweet by President Donald Trump's twitter account (@realdonaldtrump) with a reminder of a recent mass shooting from 2017.
 
-The bot is created with NodeJS and uses the twit node package to communicate with Twitter. The data comes from the [Gun Violence Archive](http://www.gunviolencearchive.org/).
+The bot is created with NodeJS and uses the [twit](https://www.npmjs.com/package/twit) node package to communicate with Twitter. The data comes from the [Gun Violence Archive](http://www.gunviolencearchive.org/).
 
 ## Installation
 

@@ -9,7 +9,7 @@ const config = {
 }
 
 const Twitter = new twit(config);
-const stream = Twitter.stream('statuses/filter', { follow: '@realdonaldtrump' })
+const stream = Twitter.stream('statuses/filter', { follow: '25073877' })
 
 // import shootings data
  const data = require('./data.json');
@@ -21,7 +21,7 @@ const stream = Twitter.stream('statuses/filter', { follow: '@realdonaldtrump' })
 // creating the variables to hold the current place in the data and to persist it when application restarts
 let x;
 let i;
-i > 1 ? i = x : i = 1
+i > 1 ? i = x : i = 1;
 
 // the response function
  function respond(event) {

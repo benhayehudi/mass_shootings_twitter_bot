@@ -34,7 +34,7 @@ let tweet = function() {
 
           Twitter.post('statuses/update', { status: `.@realdonaldtrump - Never forget ${current[0]} in ${current[2]}, ${current[1]} when innocent people were killed & injured. #gunviolence` }, function(err, data, response) {
             if (response) {
-              i + 1;
+              i++;
               x = i;
               console.log("Tweeted to Donald Trump")
               console.log(`i is now: ${i}`);

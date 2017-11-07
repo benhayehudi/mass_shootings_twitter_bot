@@ -32,7 +32,7 @@ let tweet = function() {
   let current = data[i],
      victimTotal = parseInt(current[4]) + parseInt(current[5]);
 
-          Twitter.post('statuses/update', { status: `.@realdonaldtrump - Never forget ${current[0]} in ${current[2]}, ${current[1]} when innocent people were killed & injured. #gunviolence` }, function(err, data, response) {
+          Twitter.post('statuses/update', { status: `.@realdonaldtrump - Never forget ${current[0]} in ${current[2]}, ${current[1]} when ${victimTotal} people were killed & injured. #gunviolence` }, function(err, data, response) {
             if (response) {
               i++;
               x = i;

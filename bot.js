@@ -40,7 +40,7 @@ let retweet = function() {
 
     Twitter.get('search/tweets', params, function(err, data) {
         if (!err) {
-          for (let n = 0; n < 1; n++) {
+          for (let n = 0; n <= 3; n++) {
           // let rtId = data.statuses[n].id_str;
           let screenName = data.statuses[n].screen_name;
           //  Retweet
